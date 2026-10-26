@@ -9,7 +9,7 @@ class Banda{
 }
 
 class Rock inherits Banda{
-    var cantidadSolosDeGuitarra = 0
+    var cantidadSolosDeGuitarra 
 
     override method gastoExtra() = 10000
     override method popularidad() = 100 * cantidadSolosDeGuitarra

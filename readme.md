@@ -16,4 +16,4 @@
 
 
 # Diagrama de clases
-![alt text](image.png)
+![alt text](diagrama_solucion_DANTE_PETRIZZI.png)
