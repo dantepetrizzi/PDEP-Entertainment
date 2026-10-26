@@ -1,10 +1,10 @@
 import productora.*
 class Banda{
-    const nombre
+    const property nombre
     
     method canon() = 1000000
     method presupuesto() = self.canon() + self.gastoExtra()
-    method gastoExtra() = 0
+    method gastoExtra() 
     method popularidad()
 }
 

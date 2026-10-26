@@ -1,9 +1,8 @@
-import asistente.*
 import productora.*
 
-class Entradas {
+class Entrada {
     const property banda
     const property fecha
 
-    method precioFinal() = 1000 + productora.impuestoFijado() - Asistente.abono().descuento()
+    method precioFinal(asistente) = 1000 + productora.impuestoFijado() 
 }

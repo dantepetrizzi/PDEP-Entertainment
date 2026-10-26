@@ -2,10 +2,10 @@ import asistente.*
 object productora{//hay una sola
     const property asistentes = #{}
     const bandas = #{}
+    var property impuestoFijado = 0
 
-
-    method impuestoFijado() = 0
-    method gananciaTotal() = asistentes.map({asistente => asistente.entradas().map({entrada => entrada.precioFinal()}).sum()}).sum() - bandas.map({banda => banda.presupuesto()})
+    method registrarBanda(banda) { bandas.add(banda) }
+    method gananciaTotal() = asistentes.map({asistente => asistente.entradas().map({entrada => entrada.precioFinal()}).sum()}).sum() - bandas.sum({banda => banda.presupuesto()})
 
     method cantidadEntradasVendidas() = asistentes.map({asistente => asistente.entradas()}).flatten().size()
 

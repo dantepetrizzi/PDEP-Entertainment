@@ -6,6 +6,8 @@ class Asistente {
     var property abono 
     
 
+    method montoAPagar(entrada) = entrada.precioFinal() * (100 - abono.descuento()) / 100
+
     method comprarEntrada(entrada){
         if(dinero > 0){
             dinero = dinero - entrada.precioFinal() 
@@ -24,6 +26,7 @@ class Asistente {
 class Vip {
     var descuento
 
+    method descuento() = descuento
     method bonificar() {
         descuento = descuento * 1.01
     }
@@ -31,7 +34,7 @@ class Vip {
 
 object fan {
     method descuento() = 0
-    method bonificar() { }  
+    method bonificar() {}  
 }
 
 
