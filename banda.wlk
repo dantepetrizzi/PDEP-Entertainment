@@ -6,7 +6,6 @@ class Banda{
     method presupuesto() = self.canon() + self.gastoExtra()
     method gastoExtra() = 0
     method popularidad()
-    method cantidadDeEntradasVendidas() = productora.asistentes().entradas().filter({entrada => entrada.banda() == nombre}).flatten().size()
 }
 
 class Rock inherits Banda{

@@ -1,3 +1,4 @@
+import asistente.*
 object productora{//hay una sola
     const property asistentes = #{}
     const bandas = #{}
@@ -8,6 +9,10 @@ object productora{//hay una sola
 
     method cantidadEntradasVendidas() = asistentes.map({asistente => asistente.entradas()}).flatten().size()
 
-    method bandaQueMasVendio() = bandas.max({banda => banda.cantidadDeEntradasVendidas()})
+    method cantidadDeEntradasVendidas(banda) = asistentes.sum({asistente => asistente.entradas().count({ entrada => entrada.banda() == banda })})
+    method bandaQueMasVendio() = bandas.max({ banda => self.cantidadDeEntradasVendidas(banda) })
 
+    method bonificarVips(){
+        asistentes.forEach({ asistente => asistente.abono().bonificar() })
+    }
 }

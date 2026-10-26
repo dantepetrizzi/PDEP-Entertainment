@@ -21,15 +21,18 @@ class Asistente {
 }
 
 
-object fan{ 
+class Vip {
+    var descuento
+
+    method bonificar() {
+        descuento = descuento * 1.01
+    }
+}
+
+object fan {
     method descuento() = 0
+    method bonificar() { }  
 }
-
-class Vip{ //vip es una clase porque tiene estado
-    var descuento 
-    method descuento() = descuento
-}
-
 
 
 
