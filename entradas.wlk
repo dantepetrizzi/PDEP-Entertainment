@@ -4,5 +4,5 @@ class Entrada {
     const property banda
     const property fecha
 
-    method precioFinal(asistente) = 1000 + productora.impuestoFijado() 
+    method precioFinal() = 1000 + productora.impuestoFijado() 
 }

@@ -2,7 +2,7 @@
 import excepciones.*
 class Asistente {
     const property entradas = []
-    var dinero = 0 
+    var property dinero = 0
     var property abono 
     
 
@@ -10,7 +10,7 @@ class Asistente {
 
     method comprarEntrada(entrada){
         if(dinero > 0){
-            dinero = dinero - entrada.precioFinal() 
+            dinero = dinero - self.montoAPagar(entrada)
             entradas.add(entrada)
         } else{
             throw new AsistenteComparaSinSaldo()
@@ -19,7 +19,7 @@ class Asistente {
 
     method entradasQueSacoElAnioAnterior() = entradas.filter({entrada => entrada.fecha().year() == (new Date().year()-1)}) 
 
-    method bandasVistas() = entradas.map({entrada => entrada.banda()}).asSet()
+   method bandasVistas() = entradas.map({ entrada => entrada.banda().nombre() }).asSet()
 }
 
 
