@@ -12,7 +12,5 @@
 
 6) realice excepciones para cuando el cliente no tiene el saldo positivo y por ende no puede comprar una nueva entrada. Aca hay una aclaracion yo hice que aunque no le alcance la plata pueda comprar la entrada y quedara con saldo negativo, esto porque sino nunca podria quedar con un saldo negativo y el texto te aclara que es una posibilidad. Ademas que como no dice nada no quise complejizar el codigo.
 
-7) Delegue responsabilidades: la entrada sabe si es del año pasado (esDelAnioPasado()), cada asistente sabe cuanto gasto (gastoEnEntradas()), cuantas entradas tiene (cantidadEntradas()) y cuantas de una banda (cantidadEntradasDe(banda)), y la productora solo consulta y suma esos valores (delegacion y responsabilidad unica).
-
 # Diagrama de clases
 ![alt text](diagrama_solucion_DANTE_PETRIZZI.png)
