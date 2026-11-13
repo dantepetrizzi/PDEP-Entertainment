@@ -4,7 +4,7 @@
 
 2) Utlice herencia para no repetir logica en la parte que hablamos sobre las bandas y empezamos a diferenciarlas unas a otras por si son de rock, indie, etc. 
 
-3) Tambien utilice el concepto de polimorfismo en el tp, concretamenta en la distincion de vip y fan, donde los dos entienden los mismo dos metodos y hacen cosas distintas, Lo mismo pasa con las bandas: presupuesto() llama a gastoExtra() y cada tipo de banda lo resuelve a su manera.
+3) Tambien utilice el concepto de polimorfismo en el tp, concretamenta en la distincion de vip y fan, donde los dos entienden los mismos dos metodos (descuento() y bonificar()) y hacen cosas distintas. Ambos implementan la misma interfaz Abono (que en Wollok no se refleja en el codigo, pero si en el diagrama de clases), Lo mismo pasa con las bandas: presupuesto() llama a gastoExtra() y cada tipo de banda lo resuelve a su manera.
 
 4) En ocaciones utilize const property y el nombre de una variable para inicializarla y de esta forma tener el getter de la varibale sin crear el setter, haciendo de esta forma mas seguro el codigo. (encapsulamiento)
 
@@ -12,8 +12,7 @@
 
 6) realice excepciones para cuando el cliente no tiene el saldo positivo y por ende no puede comprar una nueva entrada. Aca hay una aclaracion yo hice que aunque no le alcance la plata pueda comprar la entrada y quedara con saldo negativo, esto porque sino nunca podria quedar con un saldo negativo y el texto te aclara que es una posibilidad. Ademas que como no dice nada no quise complejizar el codigo.
 
-
-
+7) Delegue responsabilidades: la entrada sabe si es del año pasado (esDelAnioPasado()), cada asistente sabe cuanto gasto (gastoEnEntradas()), cuantas entradas tiene (cantidadEntradas()) y cuantas de una banda (cantidadEntradasDe(banda)), y la productora solo consulta y suma esos valores (delegacion y responsabilidad unica).
 
 # Diagrama de clases
 ![alt text](diagrama_solucion_DANTE_PETRIZZI.png)
