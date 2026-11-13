@@ -1,4 +1,3 @@
-import productora.*
 class Banda{
     const property nombre
     
@@ -9,14 +8,14 @@ class Banda{
 }
 
 class Rock inherits Banda{
-    var cantidadSolosDeGuitarra 
+    const cantidadSolosDeGuitarra 
 
     override method gastoExtra() = 10000
     override method popularidad() = 100 * cantidadSolosDeGuitarra
 }
 
 class Trap inherits Banda{
-    var tieneHielo 
+    const tieneHielo
 
      override method gastoExtra() = 0
      override method popularidad(){
@@ -33,7 +32,7 @@ class Trap inherits Banda{
 
 
 class Indie inherits Banda{
-    var cantidadInstrumentos 
+    const cantidadInstrumentos 
     override method gastoExtra() = cantidadInstrumentos * 500
     override method popularidad() = 3.14 * nombre.size()
 

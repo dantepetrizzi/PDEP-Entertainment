@@ -4,5 +4,7 @@ class Entrada {
     const property banda
     const property fecha
 
-    method precioFinal() = 1000 + productora.impuestoFijado() 
+    method precioFinal() = 1000 + productora.impuestoFijado()
+
+    method esDelAnioPasado() = fecha.year() == new Date().year() - 1
 }
